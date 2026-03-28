@@ -46,23 +46,23 @@ const credentials: CredentialItem[] = [
 
 export default function EducationSection() {
   return (
-    <section className="py-24 px-8 max-w-screen-2xl mx-auto">
-      <div className="liquid-glass p-12 relative">
-        <div className="absolute top-0 right-12 w-24 h-1 bg-primary" />
+    <section className="py-16 md:py-24 px-4 md:px-8 max-w-screen-2xl mx-auto">
+      <div className="liquid-glass p-6 md:p-12 relative">
+        <div className="absolute top-0 right-8 md:right-12 w-16 md:w-24 h-1 bg-primary" />
 
-        <div className="flex flex-col md:flex-row justify-between gap-12">
-          <div className="max-w-sm">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
+          <div className="md:max-w-sm">
             <span className="font-mono text-outline text-xs uppercase tracking-widest">
               Foundation
             </span>
-            <h2 className="font-headline text-4xl font-bold mt-2 uppercase tracking-tight">
+            <h2 className="font-headline text-2xl md:text-4xl font-bold mt-2 uppercase tracking-tight">
               Academic_Log
             </h2>
-            <p className="text-on-surface-variant mt-4 leading-relaxed">
+            <p className="text-on-surface-variant mt-3 md:mt-4 leading-relaxed text-sm md:text-base">
               Formal academic training in Computer Science — from foundational
               schooling through diploma to engineering degree.
             </p>
-            <div className="mt-6 flex items-center gap-2">
+            <div className="mt-4 md:mt-6 flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="font-mono text-[10px] text-primary uppercase tracking-widest">
                 Currently Enrolled
@@ -70,42 +70,38 @@ export default function EducationSection() {
             </div>
           </div>
 
-          <div className="flex-grow space-y-8">
+          <div className="flex-grow space-y-6 md:space-y-8">
             {credentials.map((cred) => (
-              <div key={cred.degree} className="flex items-start gap-4 group">
-                <div className="relative">
+              <div key={cred.degree} className="flex items-start gap-3 md:gap-4 group">
+                <div className="relative shrink-0">
                   <span
-                    className={`material-symbols-outlined ${cred.iconColor} text-3xl mt-0.5 transition-all duration-300`}
-                    style={
-                      cred.filled
-                        ? { fontVariationSettings: "'FILL' 1" }
-                        : undefined
-                    }
+                    className={`material-symbols-outlined ${cred.iconColor} text-2xl md:text-3xl mt-0.5 transition-all duration-300`}
+                    style={cred.filled ? { fontVariationSettings: "'FILL' 1" } : undefined}
                   >
                     {cred.icon}
                   </span>
                 </div>
 
-                <div className="flex-grow">
+                <div className="flex-grow min-w-0">
                   <div className="flex flex-wrap items-start justify-between gap-2">
-                    <h4 className="font-bold text-lg uppercase tracking-tighter text-on-surface">
+                    <h4 className="font-bold text-base md:text-lg uppercase tracking-tighter text-on-surface">
                       {cred.degree}
                     </h4>
                     {cred.status === "pursuing" ? (
-                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-primary/30 font-mono text-[9px] text-primary uppercase tracking-wider">
+                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-primary/30 font-mono text-[9px] text-primary uppercase tracking-wider shrink-0">
                         <span className="w-1 h-1 rounded-full bg-primary animate-pulse" />
                         Pursuing
                       </span>
                     ) : (
-                      <span className="px-2 py-0.5 rounded-full border border-outline-variant/30 font-mono text-[9px] text-outline uppercase tracking-wider">
+                      <span className="px-2 py-0.5 rounded-full border border-outline-variant/30 font-mono text-[9px] text-outline uppercase tracking-wider shrink-0">
                         Completed
                       </span>
                     )}
                   </div>
-                  <p className="text-on-surface-variant text-sm mt-0.5">
+                  <p className="text-on-surface-variant text-xs md:text-sm mt-0.5">
                     {cred.institution}
                   </p>
-                  <div className="flex items-center gap-4 mt-1.5">
+                  <div className="flex flex-wrap items-center gap-2 md:gap-4 mt-1.5">
                     <span className="font-mono text-[10px] text-outline uppercase tracking-wider">
                       {cred.period}
                     </span>

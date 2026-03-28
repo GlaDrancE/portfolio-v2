@@ -45,6 +45,19 @@ const experiences: ExperienceEntry[] = [
     ],
   },
   {
+    period: "JUN 2023 — JUL 2023",
+    role: "Python Dev Intern",
+    company: "IANT LLC",
+    location: "Nagpur",
+    companyColor: "text-tertiary",
+    bulletColor: "text-tertiary",
+    accentBorder: "border-l-4 border-outline-variant group-hover:border-tertiary",
+    tags: ["Python", "SQLite", "GUI"],
+    highlights: [
+      "Developed a GUI-based Password Generator application in Python with SQLite database integration for persistent storage and record management.",
+    ],
+  },
+  {
     period: "JUL 2021 — MAR 2023",
     role: "Freelance Web Developer",
     company: "Fiverr",
@@ -63,57 +76,55 @@ const experiences: ExperienceEntry[] = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-24 px-8 max-w-screen-2xl mx-auto">
-      <div className="flex items-center gap-4 mb-16">
-        <h2 className="font-headline text-4xl font-bold">CAREER_LOG</h2>
+    <section id="experience" className="py-16 md:py-24 px-4 md:px-8 max-w-screen-2xl mx-auto">
+      <div className="flex items-center gap-4 mb-10 md:mb-16">
+        <h2 className="font-headline text-2xl md:text-4xl font-bold shrink-0">CAREER_LOG</h2>
         <div className="flex-grow h-[1px] bg-gradient-to-r from-outline-variant/50 to-transparent" />
         <span className="font-mono text-outline text-xs hidden md:block">
           {experiences.length}_ENTRIES
         </span>
       </div>
 
-      <div className="space-y-10">
+      <div className="space-y-8 md:space-y-10">
         {experiences.map((exp) => (
           <div
             key={`${exp.company}-${exp.period}`}
-            className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 group"
+            className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-3 md:gap-6 group"
           >
-            {/* Sidebar: date + location */}
-            <div className="pt-1 space-y-1">
-              <div className="font-mono text-xs text-outline uppercase tracking-wider">
+            {/* Sidebar: date + location — inline on mobile */}
+            <div className="md:pt-1 flex md:flex-col gap-2 md:gap-1">
+              <div className="font-mono text-[10px] md:text-xs text-outline uppercase tracking-wider">
                 {exp.period}
               </div>
-              <div className="font-mono text-[10px] text-outline-variant uppercase tracking-widest">
+              <div className="font-mono text-[9px] md:text-[10px] text-outline-variant uppercase tracking-widest">
                 {exp.location}
               </div>
             </div>
 
             {/* Card */}
-            <div
-              className={`liquid-glass p-8 transition-all duration-300 ${exp.accentBorder}`}
-            >
+            <div className={`liquid-glass p-4 md:p-8 transition-all duration-300 ${exp.accentBorder}`}>
               {/* Header */}
-              <div className="flex flex-wrap justify-between items-start gap-3 mb-5">
+              <div className="flex flex-wrap justify-between items-start gap-2 mb-4 md:mb-5">
                 <div>
-                  <h3 className="text-xl font-bold text-on-surface font-headline uppercase tracking-tight">
+                  <h3 className="text-base md:text-xl font-bold text-on-surface font-headline uppercase tracking-tight">
                     {exp.role}
                   </h3>
-                  <p className={`${exp.companyColor} font-mono text-sm uppercase mt-0.5`}>
+                  <p className={`${exp.companyColor} font-mono text-xs md:text-sm uppercase mt-0.5`}>
                     {exp.company}
                   </p>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-1.5 md:gap-2">
                   {exp.tags?.map((tag) => (
                     <span
                       key={tag}
-                      className="hidden sm:inline-block px-2 py-0.5 rounded-full border border-outline-variant/30 font-mono text-[9px] text-outline uppercase tracking-wider"
+                      className="px-2 py-0.5 rounded-full border border-outline-variant/30 font-mono text-[8px] md:text-[9px] text-outline uppercase tracking-wider"
                     >
                       {tag}
                     </span>
                   ))}
                   {exp.showVerified && (
                     <span
-                      className={`material-symbols-outlined ${exp.companyColor} opacity-60 text-xl`}
+                      className={`material-symbols-outlined ${exp.companyColor} opacity-60 text-lg md:text-xl`}
                       style={{ fontVariationSettings: "'FILL' 1" }}
                     >
                       verified
@@ -123,10 +134,10 @@ export default function ExperienceSection() {
               </div>
 
               {/* Bullets */}
-              <ul className="space-y-2.5">
+              <ul className="space-y-2 md:space-y-2.5">
                 {exp.highlights.map((item, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-on-surface-variant leading-relaxed">
-                    <span className={`${exp.bulletColor} mt-0.5 text-xs font-mono shrink-0`}>
+                  <li key={i} className="flex gap-2 md:gap-3 text-xs md:text-sm text-on-surface-variant leading-relaxed">
+                    <span className={`${exp.bulletColor} mt-0.5 text-[10px] md:text-xs font-mono shrink-0`}>
                       &gt;&gt;
                     </span>
                     {item}

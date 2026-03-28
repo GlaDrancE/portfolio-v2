@@ -126,15 +126,15 @@ const accentClasses = {
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-8 bg-surface-container-low/30">
+    <section id="skills" className="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low/30">
       <div className="max-w-screen-2xl mx-auto">
         {/* Section header */}
-        <div className="flex items-end justify-between mb-12 border-b border-outline-variant/20 pb-6">
+        <div className="flex items-end justify-between mb-8 md:mb-12 border-b border-outline-variant/20 pb-5 md:pb-6">
           <div>
             <span className="font-mono text-secondary text-xs tracking-widest uppercase">
               01 // Toolkit
             </span>
-            <h2 className="font-headline text-4xl font-bold text-on-surface mt-2">
+            <h2 className="font-headline text-2xl md:text-4xl font-bold text-on-surface mt-2">
               TECHNICAL_STACK
             </h2>
           </div>

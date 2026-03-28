@@ -61,7 +61,7 @@ export default function HeroHeadline() {
   // ── Lock height right after typing finishes (before font cycling mutates layout)
   useLayoutEffect(() => {
     if (typingDone && h1Ref.current && lockedHeight === null) {
-      setLockedHeight(h1Ref.current.getBoundingClientRect().height + 50);
+      setLockedHeight(h1Ref.current.getBoundingClientRect().height + 24);
     }
   }, [typingDone, lockedHeight]);
 
@@ -111,7 +111,7 @@ export default function HeroHeadline() {
     return (
       <h1
         ref={h1Ref}
-        className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-none"
+        className="font-headline text-[2.5rem] sm:text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-none"
       >
         {before}
         {accent && <span className="text-primary">{accent}</span>}
@@ -128,7 +128,7 @@ export default function HeroHeadline() {
   return (
     <h1
       ref={h1Ref}
-      className="text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-none"
+      className="text-[2.25rem] sm:text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-tight"
       style={lockedHeight ? { height: lockedHeight } : undefined}
     >
       {WORDS.map((word, i) => (

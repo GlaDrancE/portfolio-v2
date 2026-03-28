@@ -69,8 +69,7 @@ export default function HeroSection() {
           <div className="absolute top-1/2 left-0 w-full h-[1px] bg-primary/10 -translate-y-1/2 scale-x-125 hidden md:block" />
 
           <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 font-mono text-[9px] md:text-[10px] text-primary/80 liquid-glass px-2 md:px-3 py-1 md:py-1.5 z-20">
-            <span className="animate-pulse">●</span> BIOMETRIC_ID: USER_8842_X
-          </div>
+            <span className="animate-pulse">●</span> PERSON_NAME: AYUSH_RAMTEKE</div>
 
           <div className="hud-text absolute top-0 right-[-60px] whitespace-nowrap rotate-90 hidden lg:block">
             SCANNING_FACIAL_NODES... [OK]

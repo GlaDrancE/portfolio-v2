@@ -61,7 +61,8 @@ export default function HeroHeadline() {
   // ── Lock height right after typing finishes (before font cycling mutates layout)
   useLayoutEffect(() => {
     if (typingDone && h1Ref.current && lockedHeight === null) {
-      setLockedHeight(h1Ref.current.getBoundingClientRect().height + 50);
+      const buffer = window.innerWidth < 768 ? 24 : 50;
+      setLockedHeight(h1Ref.current.getBoundingClientRect().height + buffer);
     }
   }, [typingDone, lockedHeight]);
 

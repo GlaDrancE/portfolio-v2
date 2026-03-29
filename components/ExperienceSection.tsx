@@ -45,19 +45,6 @@ const experiences: ExperienceEntry[] = [
     ],
   },
   {
-    period: "JUN 2023 — JUL 2023",
-    role: "Python Dev Intern",
-    company: "IANT LLC",
-    location: "Nagpur",
-    companyColor: "text-tertiary",
-    bulletColor: "text-tertiary",
-    accentBorder: "border-l-4 border-outline-variant group-hover:border-tertiary",
-    tags: ["Python", "SQLite", "GUI"],
-    highlights: [
-      "Developed a GUI-based Password Generator application in Python with SQLite database integration for persistent storage and record management.",
-    ],
-  },
-  {
     period: "JUL 2021 — MAR 2023",
     role: "Freelance Web Developer",
     company: "Fiverr",

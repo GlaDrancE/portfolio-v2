@@ -81,7 +81,7 @@ export default function TestimonialsSection() {
               </svg>
             ))}
           </div>
-          <span className="font-mono text-xs text-primary tracking-widest">5.0 // 6 REVIEWS</span>
+          <span className="font-mono text-xs text-primary tracking-widest">5.0 </span>
         </div>
       </div>
 

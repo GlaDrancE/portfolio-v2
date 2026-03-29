@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SiGithub } from "react-icons/si";
 
 export default function ProjectsSection() {
   return (
@@ -38,13 +39,18 @@ export default function ProjectsSection() {
               <p className="text-on-surface-variant text-xs md:text-base max-w-lg mb-4 md:mb-6 leading-relaxed line-clamp-3 md:line-clamp-none">
                 Built a personal MCP server in TypeScript that passively learns my behavior — terminal activity, browser context, downloads, and task patterns — so AI tools have full context of who I am without me repeating myself every time.
               </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-primary font-mono text-xs md:text-sm hover:gap-4 transition-all"
-              >
-                VIEW_SOURCE{" "}
-                <span className="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
-              </a>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://github.com/GlaDrancE/Tasks-Bine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-mono text-xs md:text-sm hover:gap-4 transition-all"
+                >
+                  <SiGithub className="w-3.5 h-3.5 shrink-0" />
+                  VIEW_SOURCE
+                  <span className="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -64,9 +70,9 @@ export default function ProjectsSection() {
               {/* Tech tags overlay */}
               <div className="absolute bottom-0 left-0 right-0 px-3 md:px-4 pb-2 md:pb-3 pt-4 md:pt-6 bg-gradient-to-t from-surface/95 to-transparent ease-out space-y-1 md:space-y-1.5">
                 {[
-                  { label: "FE", color: "text-primary",   tags: ["React", "TailwindCSS", "ShadCN"] },
-                  { label: "BE", color: "text-secondary",  tags: ["Node.js", "Express", "Prisma", "Stripe"] },
-                  { label: "⬡",  color: "text-tertiary",   tags: ["TurboRepo", "Docker", "AWS"] },
+                  { label: "FE", color: "text-primary",  tags: ["React", "TailwindCSS", "ShadCN"] },
+                  { label: "BE", color: "text-secondary", tags: ["Node.js", "Express", "Prisma", "Stripe"] },
+                  { label: "⬡",  color: "text-tertiary",  tags: ["TurboRepo", "Docker", "AWS"] },
                 ].map(({ label, color, tags }) => (
                   <div key={label} className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
                     <span className={`font-mono text-[8px] ${color} opacity-50 uppercase tracking-widest w-5 shrink-0`}>
@@ -95,12 +101,15 @@ export default function ProjectsSection() {
                   Microservices-based SaaS platform for restaurants with QR-driven customer engagement and loyalty systems. API Gateway, shared schema strategy, and async integrations for payments, notifications, and referrals.
                 </p>
               </div>
-              <div className="mt-4 md:mt-6">
+              <div className="mt-4 md:mt-6 flex gap-2">
                 <a
-                  href="#experience"
-                  className="w-full py-2.5 md:py-3 liquid-glass text-secondary font-mono text-[10px] md:text-xs hover:bg-secondary/10 transition-all uppercase flex items-center justify-center gap-2"
+                  href="https://entugo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2.5 md:py-3 liquid-glass text-secondary font-mono text-[10px] md:text-xs hover:bg-secondary/10 transition-all uppercase flex items-center justify-center gap-2"
                 >
-                  VIEW_CASE_STUDY
+                  <span className="material-symbols-outlined text-sm">open_in_new</span>
+                  LIVE_SITE
                 </a>
               </div>
             </div>
@@ -127,10 +136,19 @@ export default function ProjectsSection() {
                   100+ AI tools but local businesses still struggle with websites. Today a website is about converting a landing page into an <em>asset</em> — building BakedAsset with that vision.
                 </p>
               </div>
-              <div className="mt-4 md:mt-6">
+              <div className="mt-4 md:mt-6 flex items-center justify-between">
                 <span className="font-mono text-[10px] text-tertiary">
                   STATUS: BUILDING_ASSETS
                 </span>
+                <a
+                  href="https://github.com/GlaDrancE/BakedAsset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="text-outline hover:text-tertiary transition-colors"
+                >
+                  <SiGithub className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -159,13 +177,24 @@ export default function ProjectsSection() {
                 Full-stack healthcare system bridging doctors and patients with digital prescriptions, encrypted document storage, and real-time medical record access — secured via JWT + RBAC and OTP verification.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 md:gap-6">
+              <div className="flex flex-wrap items-center gap-3 md:gap-6">
                 <a
-                  href="#"
+                  href="https://mediglad.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-secondary font-mono text-xs md:text-sm hover:gap-4 transition-all"
                 >
-                  VIEW_SOURCE{" "}
-                  <span className="material-symbols-outlined text-sm md:text-base">arrow_forward</span>
+                  <span className="material-symbols-outlined text-sm md:text-base">open_in_new</span>
+                  LIVE_DEMO
+                </a>
+                <a
+                  href="https://github.com/GlaDrancE/Medilink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-outline hover:text-secondary font-mono text-xs md:text-sm transition-all"
+                >
+                  <SiGithub className="w-3.5 h-3.5 shrink-0" />
+                  VIEW_SOURCE
                 </a>
                 <span className="font-mono text-[8px] md:text-[10px] text-secondary/50 uppercase tracking-widest hidden sm:block">
                   PWA // ROLE_BASED_ACCESS // OTP_AUTH

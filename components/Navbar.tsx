@@ -2,11 +2,11 @@ import NavLogo from "@/components/NavLogo";
 
 export default function Navbar() {
   const navLinks = [
-    { href: "#about",        label: "About",        active: true  },
-    { href: "#skills",       label: "Skills"                      },
-    { href: "#projects",     label: "Projects"                    },
-    { href: "#experience",   label: "Experience"                  },
-    { href: "#testimonials", label: "Testimonials"                },
+    { href: "#about", label: "About", active: true },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
+    { href: "#testimonials", label: "Testimonials" },
   ];
 
   return (
@@ -36,9 +36,9 @@ export default function Navbar() {
           {/* Mobile quick links — show 3 key sections as dots */}
           <div className="flex md:hidden gap-3 mr-1">
             {[
-              { href: "#skills",     icon: "terminal"    },
-              { href: "#projects",   icon: "folder_open" },
-              { href: "#experience", icon: "history"     },
+              { href: "#skills", icon: "terminal" },
+              { href: "#projects", icon: "folder_open" },
+              { href: "#experience", icon: "history" },
             ].map((l) => (
               <a
                 key={l.href}
@@ -51,7 +51,8 @@ export default function Navbar() {
           </div>
 
           <a
-            href="mailto:ayushr1606@gmail.com"
+            href="/Gldsy.pdf"
+            target="_blank"
             className="bg-primary text-on-primary px-3 md:px-4 py-1.5 md:py-2 font-mono text-xs md:text-sm font-bold active:scale-90 transition-transform hover:bg-cyan-500/10 transition-all duration-300 whitespace-nowrap"
           >
             <span className="hidden sm:inline">RESUME.EXE</span>

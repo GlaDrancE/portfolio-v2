@@ -28,6 +28,8 @@ import {
   SiBabel,
   SiPhp,
   SiGooglecloud,
+  SiNestjs,
+  SiGraphql
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import type { IconType } from "react-icons";
@@ -65,10 +67,9 @@ const groups: TechGroup[] = [
     techs: [
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express.js", icon: SiExpress },
-      { name: "Python", icon: SiPython },
       { name: "PHP", icon: SiPhp },
-      { name: "C++", icon: SiCplusplus },
-      { name: "C", icon: SiC },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "GraphQL", icon: SiGraphql },
     ],
   },
   {

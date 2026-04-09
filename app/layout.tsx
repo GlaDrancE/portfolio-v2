@@ -10,6 +10,7 @@ import {
   Audiowide,
   Rajdhani,
 } from "next/font/google";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -71,9 +72,46 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "GladCode// PORTFOLIO",
-  description:
-    "Senior Full-Stack Architect specializing in high-performance distributed systems and responsive interactive interfaces.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s | GladCode",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: SITE_KEYWORDS,
+  authors: [{ name: "Ayush Ramteke", url: SITE_URL }],
+  creator: "Ayush Ramteke",
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: "@Glad__Code",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "technology",
 };
 
 export default function RootLayout({

@@ -18,9 +18,9 @@ export default function HeroSection() {
         </div>
 
         <p className="text-on-surface-variant max-w-xl text-base md:text-lg leading-relaxed">
-          Full-Stack Developer specializing in microservices, scalable backends,
-          and responsive interactive interfaces. I translate abstract problems
-          into executable excellence.
+          GladCode is the portfolio of Ayush Ramteke, a full-stack developer
+          specializing in microservices, scalable backend engineering, and modern
+          responsive frontend interfaces for production web applications.
         </p>
 
         <div className="flex flex-wrap gap-3 md:gap-4 pt-2 md:pt-4">
